@@ -1,0 +1,78 @@
+/* Conteneur du formulaire */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label des champs de formulaire */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Champs de saisie */
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Style pour les champs avec des erreurs */
+  .form-control.is-invalid {
+    border-color: red;
+    background-color: #f8d7da;
+  }
+  
+  /* Espace entre les champs */
+  .mb-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer du modal */
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  
+  /* Boutons du footer */
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  /* Boutons au survol */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Style des champs de saisie de type number */
+  input[type="number"] {
+    -moz-appearance: textfield;  /* Suppression des flèches dans Firefox */
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  

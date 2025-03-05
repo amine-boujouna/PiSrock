@@ -1,0 +1,103 @@
+/* Conteneur du formulaire */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre du formulaire */
+  h2.mat-dialog-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Label des champs de formulaire */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Champs de saisie */
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+  }
+  
+  /* Effet au focus sur les champs */
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  /* Style pour les champs avec des erreurs */
+  .form-control.is-invalid {
+    border-color: red;
+    background-color: #f8d7da;
+  }
+  
+  /* Espace entre les champs */
+  .mb-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer du modal */
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Boutons du footer */
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-size: 14px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 14px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  /* Boutons au survol */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Empêcher les flèches dans les champs number */
+  input[type="number"] {
+    -moz-appearance: textfield;  /* Suppression des flèches dans Firefox */
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Bouton désactivé */
+  button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  

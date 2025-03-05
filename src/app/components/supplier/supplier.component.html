@@ -1,0 +1,66 @@
+<div class="container-fluid mt-4">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <p class="text-muted mb-0">
+      Fournisseur: <strong>{{ fournisseur?.nom }}</strong>
+    </p>
+    <!-- Icône Ajouter un fournisseur -->
+    <!-- Bouton pour ouvrir le popup -->
+    <button class="btn btn-success" (click)="openModal()">  
+      <i class="fas fa-plus-circle"></i> Ajouter Fournisseur
+    </button>
+    
+  </div>
+
+  <div class="title-container" style="flex-grow: 1; text-align: center">
+    <h2 style="color: #2c3e50">Détails du Fournisseur</h2>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped w-100">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Contact</th>
+          <th>Livraisons Réussies</th>
+          <th>Total Commandes</th>
+          <th>Disponibilité</th>
+          <th>Prix Moyen</th>
+          <th>Score</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fournisseur of getPaginatedFournisseurs()">
+          <td>{{ fournisseur.nom }}</td>
+          <td>{{ fournisseur.contact }}</td>
+          <td>{{ fournisseur.livraisonsReussies }}</td>
+          <td>{{ fournisseur.totalCommandes }}</td>
+          <td>{{ fournisseur.disponibilite }}%</td>
+          <td>{{ fournisseur.prixMoyen }}</td>
+          <td>{{ fournisseur.score }}</td>
+          <td>
+            <!-- Bouton Modifier -->
+            <button (click)="openEditFournisseurDialog(fournisseur)" class="btn btn-warning">Modifier</button>
+
+            <!-- Bouton Supprimer -->
+            <button (click)="deleteFournisseur(fournisseur.id)" class="btn btn-danger">Supprimer</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination-container">
+    <ul class="pagination">
+      <li *ngFor="let page of pages" [class.active]="page === currentPage">
+        <a href="#" (click)="changePage(page)">{{ page }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+

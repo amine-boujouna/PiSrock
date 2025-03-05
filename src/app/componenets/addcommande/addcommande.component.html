@@ -1,0 +1,34 @@
+<div class="modal">
+    <div class="modal-content">
+      <h2>Ajouter une commande</h2>
+      <form (ngSubmit)="submitCommande()">
+        <div>
+            <label for="quantiteCommandee">Quantité commandée:</label>
+            <input
+              id="quantiteCommandee"
+              [(ngModel)]="commande.quantiteCommandee"
+              name="quantiteCommandee"
+              type="number"
+              required
+              (ngModelChange)="calculateMontantTotal()"
+            />
+          </div>
+          
+          <div>
+            <label for="montantTotal">Montant total:</label>
+            <input
+              id="montantTotal"
+              [(ngModel)]="commande.montantTotal"
+              name="montantTotal"
+              type="number"
+              required
+              readonly
+            />
+          </div>
+          
+  
+        <button type="submit">Ajouter Commande</button>
+        <button type="button" (click)="dialogRef.close()">Fermer</button>
+      </form>
+    </div>
+  </div>

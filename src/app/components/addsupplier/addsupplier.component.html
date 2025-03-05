@@ -1,0 +1,49 @@
+<form [formGroup]="fournisseurForm" (ngSubmit)="onSubmit()">
+    <!-- Nom -->
+    <div class="mb-3">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-control" formControlName="nom" placeholder="Nom du fournisseur">
+    </div>
+  
+    <!-- Contact -->
+    <div class="mb-3">
+      <label class="form-label">Contact</label>
+      <input type="text" class="form-control" formControlName="contact" placeholder="Contact">
+    </div>
+  
+    <!-- Livraisons Réussies -->
+    <div class="mb-3">
+      <label class="form-label">Livraisons Réussies</label>
+      <input type="number" class="form-control" formControlName="livraisonsReussies" min="0">
+    </div>
+  
+    <!-- Total Commandes -->
+    <div class="mb-3">
+      <label class="form-label">Total Commandes</label>
+      <input type="number" class="form-control" formControlName="totalCommandes" min="0">
+    </div>
+  
+    <!-- Disponibilité -->
+    <div class="mb-3">
+      <label class="form-label">Disponibilité (%)</label>
+      <input type="number" class="form-control" formControlName="disponibilite" min="0" max="100">
+    </div>
+  
+    <!-- Prix Moyen -->
+    <div class="mb-3">
+      <label class="form-label">Prix Moyen</label>
+      <input type="number" class="form-control" formControlName="prixMoyen" min="0" step="0.01">
+    </div>
+  
+    <!-- Score -->
+    <div class="mb-3">
+      <label class="form-label">Score (0 à 5)</label>
+      <input type="number" class="form-control" formControlName="score" min="0" max="5" step="0.1">
+    </div>
+  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeDialog()">Annuler</button>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </div>
+  </form>
+  
