@@ -35,6 +35,14 @@ export const navItems: NavItem[] = [
     chip: true,
     chipClass: 'bg-primary text-white',
   },
+  {
+    displayName: 'Order', 
+    iconName: 'apps',
+    route: '/Order',
+    bgcolor: 'success',
+    chip: true,
+    chipClass: 'bg-primary text-white',
+  },
   
   {
     navCap: 'Apps',

@@ -15,11 +15,15 @@
       <p><strong>Seuil Min:</strong> {{ produit.seuilMin }}</p>
       <p><strong>Seuil Max:</strong> {{ produit.seuilMax }}</p>
     </div>
+    <div *ngIf="produit.quantiteEnStock === 0" class="stock-alert">
+      <p>⚠️ <strong>Stock épuisé</strong></p>
+    </div>
+
     <div class="card-actions">
       <button class="btn primary-btn" (click)="ajouterAuPanier(produit)">
         <i class="fas fa-cart-plus"></i> Ajouter au panier
       </button>
-      <button class="btn accent-btn" (click)="openAddCommandeDialog(produit)">
+      <button class="btn accent-btn" (click)="openAddCommandeDialog(produit)" [disabled]="produit.quantiteEnStock === 0">
         <i class="fas fa-shopping-basket"></i> Commander
       </button>
       

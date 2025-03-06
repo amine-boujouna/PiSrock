@@ -8,6 +8,7 @@ import { EditProjectComponent } from "./components/project/edit-project/edit-pro
 import { ProductComponent } from './components/product/product.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
 import { PanierComponent } from './components/panier/panier.component'; // Importez le composant Panier
+import { OrderComponent } from './order/order.component';
 
 export const routes: Routes = [
   {
@@ -54,6 +55,13 @@ export const routes: Routes = [
           { path: '', component: SupplierComponent }, // Liste des fournisseurs
         ]
       },
+      {
+        path: 'Order',
+        children: [
+          { path: '', component: OrderComponent }, // Liste des fournisseurs
+        ]
+      },
+
 
       // Section Panier
       {

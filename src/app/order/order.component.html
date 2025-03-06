@@ -1,0 +1,23 @@
+<h2>Liste des Commandes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Montant Total</th>
+      <th>Statut</th>
+      <th>Quantité Commandée</th>
+      <th>Produit ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let commande of commandes">
+      <td>{{ commande.id }}</td>
+      <td>{{ commande.date  }}</td>
+      <td>{{ commande.montantTotal  }}</td>
+      <td>{{ commande.statut }}</td>
+      <td>{{ commande.quantiteCommandee }}</td>
+      <td>{{ commande.produitId }}</td>
+    </tr>
+  </tbody>
+</table>

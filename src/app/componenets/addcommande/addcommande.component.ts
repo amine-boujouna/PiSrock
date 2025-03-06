@@ -45,14 +45,27 @@ export class AddcommandeComponent {
     console.log('Produit:', this.produit);
   }
 
+
   calculateMontantTotal() {
     if (this.commande.quantiteCommandee > 0 && this.produit && this.produit.prix > 0) {
-      this.commande.montantTotal = this.commande.quantiteCommandee * this.produit.prix;
+      let montant = this.commande.quantiteCommandee * this.produit.prix;
+  
+      // Appliquer la réduction selon la quantité commandée
+      if (this.commande.quantiteCommandee >= 50) {
+        montant *= 0.8; // Réduction de 20%
+      } else if (this.commande.quantiteCommandee >= 10) {
+        montant *= 0.85; // Réduction de 15%
+      } else if (this.commande.quantiteCommandee > 5) {
+        montant *= 0.9; // Réduction de 10%
+      }
+  
+      this.commande.montantTotal = montant;
     } else {
       console.error('Prix ou quantité invalides pour calculer le montant total');
     }
   }
-
+  
+  
   submitCommande() {
     // Vérifier que la quantité, le montant total et l'ID du produit sont valides
     if (
